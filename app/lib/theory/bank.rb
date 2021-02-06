@@ -1,7 +1,8 @@
 # frozen_string_literal: true
+
 module Theory
   class Bank
-    def initialize(options = {})
+    def initialize(_options = {})
       @notes = []
       @notes.push Note.new(name: 'C', alias: '1', natural: true)
       @notes.push Note.new(name: 'C#', alias: '2', natural: false)
@@ -17,8 +18,13 @@ module Theory
       @notes.push Note.new(name: 'B', alias: '12', natural: true)
     end
 
-    def notes
-      @notes
+    attr_reader :notes
+
+    def note_at_position(position)
+      # we want to loop around, because the notes restart
+      position = position % 12 if position > 12
+
+      @notes[position - 1]
     end
   end
 end

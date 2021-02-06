@@ -21,3 +21,35 @@
             - @bank.notes.each do |note|
               .note class="#{'black' unless note.natural}"
                 = note.alias
+
+        br
+        br
+        = h3 text: "Lets try arranging them int a grid"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class="#{'black' unless column.natural}"
+                  = column.name
+
+
+        br
+        br
+        = h3 text: "Lets try a different naming convention"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class="#{'black' unless column.natural}"
+                  = column.alias
+
+        br
+        br
+        = h3 text: "Lets highlight the beginning of the scale to make it easier to find"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class="#{'black' unless column.natural} #{'purple' if column.alias == '1'}"
+                  = column.alias
+
