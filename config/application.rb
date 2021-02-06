@@ -18,5 +18,8 @@ module Neuralbeat
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # ignoring frontend from the autoloader
+    Rails.autoloaders.main.ignore(Rails.root.join('app/frontend'))
   end
 end
