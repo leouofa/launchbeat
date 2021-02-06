@@ -1,0 +1,40 @@
+{
+  "name": "Neuralbeat",
+  "description": "Music + Programming",
+  "keywords": [
+    "platform",
+    "ruby",
+    "rails"
+  ],
+  "website": "https://www.neuralbeat.dev",
+  "repository": "https://github.com/realstorypro/neuralbeat",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev"
+    },
+    {
+      "plan": "heroku-redis:hobby-dev"
+    },
+    {
+      "plan": "papertrail:choklad"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "hobby"
+    },
+    "worker": {
+      "quantity": 1,
+      "size": "hobby"
+    }
+  }
+}
