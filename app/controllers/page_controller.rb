@@ -1,5 +1,5 @@
 class PageController < ApplicationController
   def welcome
-    @notes = Theory::Bank.new
+    @bank = Theory::Bank.new
   end
 end

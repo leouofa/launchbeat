@@ -1,4 +1,23 @@
-h1
-  | Page#welcome
-p
-  | Find me in app/views/page/welcome.html.erb
+= container
+  = grid
+    = row
+      = column size: 16
+        = h1 text: 'Note World'
+        br
+        = h3 text: "There are a total of #{@bank.notes.count} notes"
+        = segment
+          .notes
+            - @bank.notes.each do |note|
+              .note class="#{'black' unless note.natural}"
+                = note.name
+
+        br
+        br
+        = h3 text: "Lets try different naming convention"
+        = text
+          | The advantage of using aliases is we no longer have to think about letters, flats or sharps. This reduces cognitive load.
+        = segment
+          .notes
+            - @bank.notes.each do |note|
+              .note class="#{'black' unless note.natural}"
+                = note.alias
