@@ -2,35 +2,21 @@
   = grid
     = row
       = column size: 16
-        = h1 text: 'TOC'
-        = list 'ordered huge suffixed'
-          = link_to 'Notes', notes_path, class: 'ui item'
-          = link_to 'Major Chords', majors_path, class: 'ui item'
-          = link_to 'Scales', notes_path, class: 'ui item'
-
-        br
-        br
-        = h3 text: "Lets highlight the beginning of the scale to make it easier to find"
-        table.grid
-          - @grid.each do |row|
-            tr
-              - row.each do |column|
-                td class="#{'black' unless column.natural} #{'purple' if column.alias == '1'}"
-                  = column.alias
-
-
-        br
-        br
-        = h3 text: "Lets highlight figure out what Major Triad looks. It is composed of  a major 3rd and perfect 5th from the root."
+        = h3 text: "Lets highlight the shapes for the Major Triads looks. It is composed of  a major 3rd and perfect 5th from the root."
         = list 'numbered large'
           = item text: 'Major 3rd is made up of 4 half-steps from the root note.'
           = item text: 'Perfect 5th is made up of 7 half-steps from the root note.'
           = item text: 'If we add 1 to 4 and 1 to 7, we will know that the notes in play are (1,5,8), where 1 is the root note.'
+
+
+        br
+        br
+        = h3 text: "Let's calculate it for the #1"
         table.grid
           - @grid.each do |row|
             tr
               - row.each do |column|
-                td class=shape_color(1, column, [1, 5, 8])
+                td style=note_color(column) class=shape_color(1, column, [1, 5, 8])
                   = column.alias
         br
         br
@@ -39,7 +25,7 @@
           - @grid.each do |row|
             tr
               - row.each do |column|
-                td class=shape_color(2, column, [1, 5, 8])
+                td style=note_color(column) class=shape_color(2, column, [1, 5, 8])
                   = column.alias
 
         br
@@ -49,7 +35,7 @@
           - @grid.each do |row|
             tr
               - row.each do |column|
-                td class=shape_color(3, column, [1, 5, 8])
+                td style=note_color(column) class=shape_color(3, column, [1, 5, 8])
                   = column.alias
         br
         br
@@ -58,7 +44,7 @@
           - @grid.each do |row|
             tr
               - row.each do |column|
-                td class=shape_color(4, column, [1, 5, 8])
+                td style=note_color(column) class=shape_color(4, column, [1, 5, 8])
                   = column.alias
         br
         br
@@ -67,7 +53,7 @@
           - @grid.each do |row|
             tr
               - row.each do |column|
-                td class=shape_color(5, column, [1, 5, 8])
+                td style=note_color(column) class=shape_color(5, column, [1, 5, 8])
                   = column.alias
 
         br
@@ -77,7 +63,7 @@
           - @grid.each do |row|
             tr
               - row.each do |column|
-                td class=shape_color(6, column, [1, 5, 8])
+                td style=note_color(column) class=shape_color(6, column, [1, 5, 8])
                   = column.alias
 
         br
@@ -87,7 +73,7 @@
           - @grid.each do |row|
             tr
               - row.each do |column|
-                td class=shape_color(7, column, [1, 5, 8])
+                td style=note_color(column) class=shape_color(7, column, [1, 5, 8])
                   = column.alias
         br
         br
@@ -96,7 +82,7 @@
           - @grid.each do |row|
             tr
               - row.each do |column|
-                td class=shape_color(8, column, [1, 5, 8])
+                td style=note_color(column) class=shape_color(8, column, [1, 5, 8])
                   = column.alias
         br
         br
@@ -105,7 +91,7 @@
           - @grid.each do |row|
             tr
               - row.each do |column|
-                td class=shape_color(9, column, [1, 5, 8])
+                td style=note_color(column) class=shape_color(9, column, [1, 5, 8])
                   = column.alias
 
         br
@@ -115,7 +101,7 @@
           - @grid.each do |row|
             tr
               - row.each do |column|
-                td class=shape_color(10, column, [1, 5, 8])
+                td style=note_color(column) class=shape_color(10, column, [1, 5, 8])
                   = column.alias
         br
         br
@@ -124,7 +110,7 @@
           - @grid.each do |row|
             tr
               - row.each do |column|
-                td class=shape_color(11, column, [1, 5, 8])
+                td style=note_color(column) class=shape_color(11, column, [1, 5, 8])
                   = column.alias
         br
         br
@@ -133,5 +119,5 @@
           - @grid.each do |row|
             tr
               - row.each do |column|
-                td class=shape_color(12, column, [1, 5, 8])
+                td style=note_color(column) class=shape_color(12, column, [1, 5, 8])
                   = column.alias
