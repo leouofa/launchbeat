@@ -2,46 +2,11 @@
   = grid
     = row
       = column size: 16
-        = h1 text: 'Note World'
-        br
-        = h3 text: "There are a total of #{@bank.notes.count} notes"
-        = segment
-          .notes
-            - @bank.notes.each do |note|
-              .note class="#{'black' unless note.natural}"
-                = note.name
-
-        br
-        br
-        = h3 text: "Lets try different naming convention"
-        = text
-          | The advantage of using aliases is we no longer have to think about letters, flats or sharps. This reduces cognitive load.
-        = segment
-          .notes
-            - @bank.notes.each do |note|
-              .note class="#{'black' unless note.natural}"
-                = note.alias
-
-        br
-        br
-        = h3 text: "Lets try arranging them int a grid"
-        table.grid
-          - @grid.each do |row|
-            tr
-              - row.each do |column|
-                td class="#{'black' unless column.natural}"
-                  = column.name
-
-
-        br
-        br
-        = h3 text: "Lets try a different naming convention"
-        table.grid
-          - @grid.each do |row|
-            tr
-              - row.each do |column|
-                td class="#{'black' unless column.natural}"
-                  = column.alias
+        = h1 text: 'TOC'
+        = list 'ordered huge suffixed'
+          = link_to 'Notes', notes_path, class: 'ui item'
+          = link_to 'Intervals', notes_path, class: 'ui item'
+          = link_to 'Scales', notes_path, class: 'ui item'
 
         br
         br

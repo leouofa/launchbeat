@@ -9,8 +9,10 @@ module Theory
       @name       = options[:name] || 'C'
       @alias      = options[:alias] || '1'
       @natural    = options[:natural]
+      @color = options[:color]
+      @text_color = options[:text_color] || 'black'
     end
 
-    attr_reader :name, :alias, :natural
+    attr_reader :name, :alias, :natural, :color, :text_color
   end
 end
