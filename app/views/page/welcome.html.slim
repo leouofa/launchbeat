@@ -53,3 +53,120 @@
                 td class="#{'black' unless column.natural} #{'purple' if column.alias == '1'}"
                   = column.alias
 
+
+        br
+        br
+        = h3 text: "Lets highlight figure out what Major Triad looks. It is composed of  a major 3rd and perfect 5th from the root."
+        = list 'numbered large'
+          = item text: 'Major 3rd is made up of 4 half-steps from the root note.'
+          = item text: 'Perfect 5th is made up of 7 half-steps from the root note.'
+          = item text: 'If we add 1 to 4 and 1 to 7, we will know that the notes in play are (1,5,8), where 1 is the root note.'
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class=shape_color(1, column, [1, 5, 8])
+                  = column.alias
+        br
+        br
+        = h3 text: "Let's recalculate it for the #2"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class=shape_color(2, column, [1, 5, 8])
+                  = column.alias
+
+        br
+        br
+        = h3 text: "Let's recalculate it for the #3"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class=shape_color(3, column, [1, 5, 8])
+                  = column.alias
+        br
+        br
+        = h3 text: "Let's recalculate it for the #4"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class=shape_color(4, column, [1, 5, 8])
+                  = column.alias
+        br
+        br
+        = h3 text: "Let's recalculate it for the #5"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class=shape_color(5, column, [1, 5, 8])
+                  = column.alias
+
+        br
+        br
+        = h3 text: "Let's recalculate it for the #6"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class=shape_color(6, column, [1, 5, 8])
+                  = column.alias
+
+        br
+        br
+        = h3 text: "Let's recalculate it for the #7"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class=shape_color(7, column, [1, 5, 8])
+                  = column.alias
+        br
+        br
+        = h3 text: "Let's recalculate it for the #8"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class=shape_color(8, column, [1, 5, 8])
+                  = column.alias
+        br
+        br
+        = h3 text: "Let's recalculate it for the #9"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class=shape_color(9, column, [1, 5, 8])
+                  = column.alias
+
+        br
+        br
+        = h3 text: "Let's recalculate it for the #10"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class=shape_color(10, column, [1, 5, 8])
+                  = column.alias
+        br
+        br
+        = h3 text: "Let's recalculate it for the #11"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class=shape_color(11, column, [1, 5, 8])
+                  = column.alias
+        br
+        br
+        = h3 text: "Let's recalculate it for the #12"
+        table.grid
+          - @grid.each do |row|
+            tr
+              - row.each do |column|
+                td class=shape_color(12, column, [1, 5, 8])
+                  = column.alias
