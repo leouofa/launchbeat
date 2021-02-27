@@ -7,7 +7,7 @@ module Theory
     # for notes to make it easier to learn
     def initialize(options = {})
       @name       = options[:name] || 'C'
-      @alias      = options[:alias] || 'N1'
+      @alias      = options[:alias] || '1'
       @natural    = options[:natural]
     end
 
