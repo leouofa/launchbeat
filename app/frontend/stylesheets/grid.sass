@@ -14,10 +14,10 @@ table.grid
       background: purple
       color: white
 
-    &.yellow
-      background: yellow
-      color: black
+    &.root
+      opacity: 0.7 !important
+      filter: grayscale(30%) !important
 
-    &.dark.yellow
-      background: darken(yellow, 10)
-      color: black
+    &.root.active
+      opacity: 1 !important
+      filter: grayscale(0%) !important

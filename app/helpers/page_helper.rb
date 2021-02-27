@@ -15,9 +15,13 @@ module PageHelper
     end
 
     if shape[0] == note.alias.to_i
-      'dark yellow'
+      'root active'
     elsif shape.include?(note.alias.to_i)
-      'yellow'
+      'root'
     end
+  end
+
+  def note_color(note)
+    "background-color: #{note.color}; color: #{note.text_color}; opacity: 0.3; filter: grayscale(100%)"
   end
 end

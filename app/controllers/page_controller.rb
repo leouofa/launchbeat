@@ -12,6 +12,10 @@ class PageController < ApplicationController
 
   end
 
+  def majors
+
+  end
+
   private
 
   def setup_grid
