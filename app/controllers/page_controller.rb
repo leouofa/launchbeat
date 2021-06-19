@@ -20,6 +20,7 @@ class PageController < ApplicationController
 
   def setup_grid
     @bank = Theory::Bank.new
+    @four_row_controller = Controller::Grid.new(width: 4, bank: @bank).build
 
     @grid = []
     row = []
