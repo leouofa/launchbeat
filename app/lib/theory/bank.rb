@@ -22,9 +22,9 @@ module Theory
 
     def note_at_position(position)
       # we want to loop around, because the notes restart
-      position = position % 12 if position > 12
+      #position = position % 12 if position > 12
 
-      @notes[position - 1]
+      @notes[position]
     end
   end
 end
