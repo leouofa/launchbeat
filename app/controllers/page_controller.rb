@@ -20,18 +20,7 @@ class PageController < ApplicationController
 
   def setup_grid
     @bank = Theory::Bank.new
+    @eight_row_controller = Controller::Grid.new(width: 8, bank: @bank).build
     @four_row_controller = Controller::Grid.new(width: 4, bank: @bank).build
-
-    @grid = []
-    row = []
-    (1..64).step do |step|
-      row.push @bank.note_at_position(step)
-      if (step % 8).zero?
-        @grid.push row.dup
-        row = []
-      end
-    end
-
-    @grid = @grid.reverse
   end
 end
