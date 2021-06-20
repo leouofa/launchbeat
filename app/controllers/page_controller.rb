@@ -9,7 +9,7 @@ class PageController < ApplicationController
   end
 
   def notes
-
+    @grid = @four_row_controller
   end
 
   def majors
@@ -20,7 +20,8 @@ class PageController < ApplicationController
 
   def setup_grid
     @bank = Theory::Bank.new
-    @eight_row_controller = Controller::Grid.new(width: 8, bank: @bank).build
-    @four_row_controller = Controller::Grid.new(width: 4, bank: @bank).build
+    # we are reversing the grid to make displaying easier (since we iterate backwards)
+    @eight_row_controller = Controller::Grid.new(width: 8, bank: @bank).build.reverse
+    @four_row_controller = Controller::Grid.new(width: 4, bank: @bank).build.reverse
   end
 end
