@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   get 'notes', to: 'page#notes'
   get 'majors', to: 'page#majors'
+
+  get 'width', action: 'set_width', controller: :grid
 end
