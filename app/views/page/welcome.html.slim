@@ -2,6 +2,12 @@
   = grid
     = row
       = column size: 16
+        = session[:grid_width].inspect
+
+        = h1 text: 'Set Grid Width'
+        = list 'ordered huge suffixed'
+          = link_to '8 notes', width_path(to: 8), class: 'ui item'
+          = link_to '4 notes', width_path(to: 4), class: 'ui item'
         = h1 text: 'TOC'
         = list 'ordered huge suffixed'
           = link_to 'Notes', notes_path, class: 'ui item'
@@ -12,7 +18,7 @@
         br
         = h3 text: "Lets highlight the beginning of the scale to make it easier to find"
         table.grid
-          - @eight_row_controller.reverse.each do |row|
+          - @eight_row_controller.each do |row|
             tr
               - row.each do |column|
                 td class="#{'black' unless column.natural} #{'purple' if column.alias == '1'}"
@@ -21,7 +27,7 @@
         br
         = h3 text: 'Lets optimize a grid for playing w/ 4 fingers'
         table.grid
-          - @four_row_controller.reverse.each do |row|
+          - @four_row_controller.each do |row|
             tr
               - row.each do |column|
                 td class="#{'black' unless column.natural} #{'purple' if column.alias == '1'}"
