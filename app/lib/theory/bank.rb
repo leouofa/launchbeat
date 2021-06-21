@@ -21,9 +21,6 @@ module Theory
     attr_reader :notes
 
     def note_at_position(position)
-      # we want to loop around, because the notes restart
-      #position = position % 12 if position > 12
-
       @notes[position]
     end
   end
