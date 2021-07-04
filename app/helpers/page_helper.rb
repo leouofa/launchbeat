@@ -15,9 +15,9 @@ module PageHelper
     end
 
     if shape[0] == note.alias.to_i
-      'root active'
-    elsif shape.include?(note.alias.to_i)
       'root'
+    elsif shape.include?(note.alias.to_i)
+      'part'
     end
   end
 
