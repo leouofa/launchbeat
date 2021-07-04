@@ -10,5 +10,27 @@ html
     = stylesheet_pack_tag 'css', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Karla:wght@300;400;600&display=swap', media: 'none', onload: "if(media!='all')media='all'"
   body
+    = menu ui: :on, class: 'inverted large'
+      = link_to 'Home', root_path, class: 'ui item'
+      = link_to 'Notes', notes_path, class: 'ui item'
+      = menu 'right'
+        = item class: 'header', text: 'Tuning'
+        = link_to '8 notes', width_path(to: 8), class: 'ui item'
+        = link_to '4 notes', width_path(to: 4), class: 'ui item'
+    = menu ui: :on, class: 'secondary large'
+      = item class: 'header', text: 'Chords'
+      = link_to 'Maj', majors_path, class: 'ui item'
+      = link_to 'Min', majors_path, class: 'ui item'
+      = link_to 'Dim', majors_path, class: 'ui item'
+      = link_to 'Aug', majors_path, class: 'ui item'
+      = link_to 'Sus', majors_path, class: 'ui item'
+      = link_to 'Sus2', majors_path, class: 'ui item'
+      = link_to '6th', majors_path, class: 'ui item'
+      = link_to '7th', majors_path, class: 'ui item'
+      = link_to 'Maj7', majors_path, class: 'ui item'
+      = link_to 'x9', majors_path, class: 'ui item'
+      = link_to 'x5', majors_path, class: 'ui item'
+    = divider
+    br
     br
     = yield
