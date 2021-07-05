@@ -1,23 +1,45 @@
 = container
   = grid
     = row
-      = column size: 16
-
+      = column computer: 11, tablet: 16, mobile: 16, class: 'centered'
+        = segment 'inverted blue padded'
+          br
+          = h1 text: 'The Truth About Music', class: 'horizontal divider'
+          br
+          = list 'huge bulleted inverted'
+            = item text: 'We are all born knowing how to tap our feet, sing and enjoy music.'
+            = item text: "Just like the human language, music is an #{link_to 'Instinct', 'https://www.amazon.com/Language-Instinct-How-Mind-Creates/dp/1491514981', target: '_blank'}.".html_safe
+            = item text: 'Music both unifies and equalizes people.'
+            = item text: 'Music is a language of feeling and through it people get to know the real us.'
+            = item text: '<b>Anyone</b> can learn music how to play music, regardless of age, creed or sexual orientation.'.html_safe
+            = item text: '<b>Music is easy to learn.</b> All you have to do is start and give yourself space to succeed.'.html_safe
+            = item text: 'Music is a marathon. Slow down and enjoy the journey.'
+          = divider 'inverted'
+          br
         br
+        = segment 'secondary padded'
+          br
+          = h1 text: 'About Grid Controllers', class: 'horizontal divider'
+          br
+          = text 'big'
+            | There are over 1,500 music instruments out there. This site focuses on <b>Grid Controllers</b>, specifically the Novation Launchpad Series, here's why:
+          = list 'huge bulleted inverted'
+            = item text: "Launchpads are similar to computer keyboards, making them an ideal choice for those that already know how to type."
+            = item text: "They're affordable with prices ranging from $100 to $350 for new models. Used ones are much cheaper."
+            = item text: "They're multi-purpose. You can play piano, viola and lay down the drum track with a single controller."
+            = item text: "They'll grow with you. As you get better at music you can expand your setup and add more launchpads to your arsenal."
+          br
         br
-        = h3 text: "Lets highlight the beginning of the scale to make it easier to find"
-        table.grid
-          - @eight_row_controller.each do |row|
-            tr
-              - row.each do |column|
-                td class="#{'black' unless column.natural} #{'purple' if column.alias == '1'}"
-                  = column.alias
-        br
-        br
-        = h3 text: 'Lets optimize a grid for playing w/ 4 fingers'
-        table.grid
-          - @four_row_controller.each do |row|
-            tr
-              - row.each do |column|
-                td class="#{'black' unless column.natural} #{'purple' if column.alias == '1'}"
-                  = column.alias
+        = segment 'purple secondary inverted padded'
+          br
+          = h1 text: 'Why Electronic Music?', class: 'horizontal divider inverted'
+          br
+          = list 'huge bulleted inverted'
+            = item text: 'Get started making music right away while you develop rhythm and timing.'
+            = item text: 'Separate learning music theory from learning how to play an instrument.'
+            = item text: 'Learn one instrument, and play hundreds of other instruments.'
+            = item text: 'Learn live looping and become a one person orchestra.'
+            = item text: 'Use filters and special effects to craft your super special sounds.'
+            = item text: 'Learn how to produce your own music to share with others.'
+            = item text: 'Music is music. You will become better at playing normal instruments.'
+          br
