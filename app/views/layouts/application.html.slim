@@ -37,3 +37,9 @@ html
     br
     br
     = yield
+    br
+    br
+    = segment 'inverted center aligned footer'
+      = h5
+        ="This Project is Sponsored by #{link_to 'Story Pro',"https://www.storypro.io", target: '_blank'}".html_safe
+
