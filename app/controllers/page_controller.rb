@@ -3,16 +3,18 @@
 class PageController < ApplicationController
   before_action :setup_grid
 
-  def welcome
-  end
+  def welcome; end
 
   def notes
     # ensuring that the grid is always 8 in width
     @grid = Controller::Grid.new(width: 8, bank: @bank).build.reverse
   end
 
-  def majors
+  def tunings
+
   end
+
+  def majors; end
 
   private
 
