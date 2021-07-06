@@ -23,3 +23,81 @@ table.grid
       filter: grayscale(0%) !important
       box-shadow: 1px 1px 1px black
       border-style: inset
+
+  // used when we want to show numbers
+  &.numbered
+    @for $i from 0 through 7
+      .row-7.column-#{$i}
+        &:after
+          content: " (1)"
+          font-weight: bold
+          opacity: 0.5
+
+    @for $i from 0 through 3
+      .row-6.column-#{$i}
+        &:after
+          content: " (1)"
+          font-weight: bold
+          opacity: 0.5
+
+    @for $i from 4 through 7
+      .row-6.column-#{$i}
+        &:after
+          content: " (2)"
+          font-weight: bold
+          opacity: 0.5
+    @for $i from 0 through 7
+      .row-5.column-#{$i}
+        &:after
+          content: " (2)"
+          font-weight: bold
+          opacity: 0.5
+
+    @for $i from 0 through 7
+      .row-4.column-#{$i}
+        &:after
+          content: " (3)"
+          font-weight: bold
+          opacity: 0.5
+
+    @for $i from 0 through 3
+      .row-3.column-#{$i}
+        &:after
+          content: " (3)"
+          font-weight: bold
+          opacity: 0.5
+
+    @for $i from 4 through 7
+      .row-3.column-#{$i}
+        &:after
+          content: " (4)"
+          font-weight: bold
+          opacity: 0.5
+
+    @for $i from 0 through 7
+      .row-2.column-#{$i}
+        &:after
+          content: " (4)"
+          font-weight: bold
+          opacity: 0.5
+
+    @for $i from 0 through 7
+      .row-1.column-#{$i}
+        &:after
+          content: " (5)"
+          font-weight: bold
+          opacity: 0.5
+
+    @for $i from 0 through 3
+      .row-0.column-#{$i}
+        &:after
+          content: " (5)"
+          font-weight: bold
+          opacity: 0.5
+
+    @for $i from 4 through 7
+      .row-0.column-#{$i}
+        &:after
+          content: " (6)"
+          font-weight: bold
+          opacity: 0.5

@@ -7,6 +7,8 @@ class PageController < ApplicationController
   end
 
   def notes
+    # ensuring that the grid is always 8 in width
+    @grid = Controller::Grid.new(width: 8, bank: @bank).build.reverse
   end
 
   def majors
