@@ -11,7 +11,7 @@ class PageController < ApplicationController
   end
 
   def tunings
-
+    @sequential = Controller::Grid.new(width: 8, bank: @bank).build.reverse
   end
 
   def majors; end
