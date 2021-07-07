@@ -12,6 +12,7 @@ class PageController < ApplicationController
 
   def tunings
     @sequential = Controller::Grid.new(width: 8, bank: @bank).build.reverse
+    @two_finger = Controller::Grid.new(width: 2, bank: @bank).build.reverse
   end
 
   def majors; end
