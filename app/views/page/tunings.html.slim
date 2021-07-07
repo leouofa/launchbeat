@@ -1,0 +1,69 @@
+= container
+  = grid
+    = row
+      = column size: 12
+        = h1 text: 'Tuning the Launchpad'
+        = list 'huge bulleted relaxed'
+          = item
+            | Its easiest to think of tuning as an arrangement of notes on the launchpad.
+          = item
+            | Both <i>Launchpad X</i> and <i>Launchpad Pro</i> come with 5 different tunings, optimized for different types of play.
+          = item
+            | In the manual the tunings are referred to as <b>Overlap Layouts</b>.
+        = image_tag 'overlap_mode.png', class: 'ui image big'
+        = list 'relaxed big bulleted'
+          = item
+            | Launchpad Mini does not have the note mode, but it does have a custom mode. You can use it to create a layout that mirriors any of the tunings of Launchpad X or Launchpad Pro.
+
+    = row
+      = column size: 16
+        = divider
+
+    = row
+      = column size: 8
+        = segment 'secondary padded'
+          = h2 text: 'Accessing the Note Mode on Launchpad X'
+          = list 'huge bulleted suffixed'
+            = item
+              | Press and Hold the <b>Note</b> Button.
+            = item
+              | Ensure that the scale toggle is off (the button on the top right hand side is red).
+      = column size: 8
+        = segment 'secondary padded'
+          = h2 text: 'Accessing the Note Mode on Launchpad Pro'
+          = list 'huge bulleted suffixed'
+            = item
+              | Press <b>Shift</b> button, and then press the <b>Note</b> Button.
+            = item
+              | Ensure that the scale toggle is off (the button on the top right hand side is red).
+
+    = row
+      = column size: 16
+        = divider
+    = row
+      = column size: 16
+        = h1 text: 'Sequential Arrangement'
+        = list 'huge bulleted suffized'
+          = item
+            | The notes repeat in sequence and do not overlap.
+          = item
+            | 5 and a half octaves are available.
+          = item
+            | Good for playing with both hands.
+          = item
+            | Chords are difficult to play with one hand.
+        table.grid
+          - @sequential.each do |row|
+            tr
+              - row.each do |column|
+                td style="background-color: #{column.color}; color: #{column.text_color};"
+                  = column.name
+
+
+    = row
+      = column size: 16
+        = divider
+
+        = h2 text: 'Additional Resources'
+        = h3 text: 'Launchpad Mini Custom Mode Overview'
+        iframe width="560" height="315" src="https://www.youtube.com/embed/mHvqwH0xQq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
