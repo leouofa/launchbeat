@@ -1,9 +1,13 @@
-# Neural Beat
+# Neural Beat 
+### ⌨️ + 🎵 = ❤️
+The purpose of this project is to make music easier to learn for non-musicians by leveraging the similarity between Launchpad grid controllers and computer keyboards.
 
-Unleashing the power of programming to make music easier to learn
 
-### Goals
-- Create a different markup language that represent sounds.
-- Deal with Enharmonic (different markup for the same notes)
-- Integrate this bad boy w/ a 64 button grid controller.
-- Generate chord shapes for grid controller.
+### Project Goals
+- To introduce incoming musicians to notes, chords and scales.
+- Programmatically generate chord shapes for Launchpad, accounting for different layouts.
+- Create a list of resources to help new musicians develop a deeper understanding of music theory and music production.
+
+
+#### Sponsorship
+This project is sponsored by [Story Pro](https://www.storypro.io).
