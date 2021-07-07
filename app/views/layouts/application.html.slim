@@ -27,7 +27,7 @@ html
     = menu ui: :on, class: 'secondary large'
       = item class: 'header', text: 'Chords'
       = link_to 'Maj', majors_path, class: 'ui item'
-      = link_to 'Min', majors_path, class: 'ui item'
+      = link_to 'Min', minors_path, class: 'ui item'
       = link_to 'Dim', majors_path, class: 'ui item'
       = link_to 'Aug', majors_path, class: 'ui item'
       = link_to 'Sus', majors_path, class: 'ui item'
@@ -37,8 +37,15 @@ html
       = link_to 'Maj7', majors_path, class: 'ui item'
       = link_to 'x9', majors_path, class: 'ui item'
       = link_to 'x5', majors_path, class: 'ui item'
-    = divider
-    br
+    - if @note_selector
+      =divider
+      = menu ui: :on, class: 'secondary'
+        = item class: 'header', text: 'Root'
+        -(0..11).step do |note|
+          = render partial: 'partials/note_selector', locals: {note: @bank.note_at_position(note)}
+      = divider
+    - else
+      = divider
     br
     = yield
     br
