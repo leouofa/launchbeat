@@ -16,6 +16,7 @@ class PageController < ApplicationController
   end
 
   def majors; end
+  def minors; end
 
   private
 
