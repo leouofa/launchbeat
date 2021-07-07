@@ -1,0 +1,8 @@
+= h3 text: "#{note.name}#{prefix}", id: "note-#{note.name.downcase}"
+= segment 'compact secondary'
+  table.grid
+    - @grid.each do |row|
+      tr
+        - row.each do |column|
+          td style=note_color(column) class=shape_color(note.alias.to_i, column, shape)
+            = column.name
