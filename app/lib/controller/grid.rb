@@ -12,8 +12,14 @@ module Controller
       case @width
       when 8
         build_eight
+      when 2
+        build_with_overlap(5)
+      when 3
+        build_with_overlap(4)
       when 4
-        build_four
+        build_with_overlap(3)
+      when 5
+        build_with_overlap(2)
       end
     end
 
@@ -51,7 +57,7 @@ module Controller
       fill_grid(grid)
     end
 
-    def build_four
+    def build_with_overlap(note_stepback)
       grid = []
       (0..7).step do |row|
         grid_row = []
@@ -63,8 +69,8 @@ module Controller
             if column.zero?
               previous_note = grid[row - 1][7]
 
-              # we want to go back 3 from the previous note
-              new_position = previous_note - 3
+              # how many steps we want to go from the previous note
+              new_position = previous_note - note_stepback
             else
               previous_note = grid_row[column - 1]
 

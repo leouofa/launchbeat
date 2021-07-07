@@ -52,12 +52,24 @@
             | Good for playing with both hands.
           = item
             | Chords are difficult to play with one hand.
-        table.grid
-          - @sequential.each do |row|
-            tr
-              - row.each do |column|
-                td style="background-color: #{column.color}; color: #{column.text_color};"
-                  = column.name
+        = segment 'secondary compact'
+          table.grid
+            - @sequential.each do |row|
+              tr
+                - row.each do |column|
+                  td style="background-color: #{column.color}; color: #{column.text_color};"
+                    = column.name
+    = row
+      = column size: 16
+        = h1 text: 'Two Finger Layout'
+        = list 'huge bulleted suffized'
+        = segment 'secondary compact'
+          table.grid
+              - @two_finger.each do |row|
+                tr
+                  - row.each do |column|
+                    td style="background-color: #{column.color}; color: #{column.text_color};"
+                      = column.name
 
 
     = row
