@@ -17,7 +17,6 @@ gem 'turbo-rails'
 gem 'webpacker', '~> 5.0'
 gem 'simple_form', '5.0.0'
 gem 'slim-rails'
-gem 'humanize'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
