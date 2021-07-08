@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'chords/index'
+  get 'chords/show'
   get 'page/welcome'
   root to: 'page#welcome'
 
