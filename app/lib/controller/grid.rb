@@ -4,7 +4,7 @@ module Controller
   class Grid
     def initialize(options = {})
       @width = options[:width]
-      @bank = options[:bank]
+      @note_bank = options[:note_bank]
       @grid = []
     end
 
@@ -99,7 +99,7 @@ module Controller
         filled_row = []
 
         row.each_with_index do |_column, column_index|
-          filled_row.push @bank.note_at_position grid_with_numbers[row_index][column_index]
+          filled_row.push @note_bank.note_at_position grid_with_numbers[row_index][column_index]
         end
 
         grid_with_notes.push filled_row

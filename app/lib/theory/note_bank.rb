@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Theory
-  class Bank
+  class NoteBank
     def initialize(_options = {})
       @notes = []
       @notes.push Note.new(name: 'C', alias: '1', natural: true, color: '#de43dd', text_color: 'white')

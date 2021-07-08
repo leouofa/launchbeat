@@ -42,7 +42,7 @@ html
       = menu ui: :on, class: 'secondary'
         = item class: 'header', text: 'Root'
         -(0..11).step do |note|
-          = render partial: 'partials/note_selector', locals: {note: @bank.note_at_position(note)}
+          = render partial: 'partials/note_selector', locals: {note: @note_bank.note_at_position(note)}
       = divider
     - else
       = divider

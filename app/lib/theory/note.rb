@@ -6,7 +6,7 @@ module Theory
     # starting to play with the idea of creating a different alias
     # for notes to make it easier to learn
     def initialize(options = {})
-      @name       = options[:name] || 'C'
+      @name       = options[:name] || 'c'
       @alias      = options[:alias] || '1'
       @natural    = options[:natural]
       @color = options[:color]
