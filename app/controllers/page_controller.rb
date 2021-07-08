@@ -3,9 +3,9 @@
 class PageController < ApplicationController
   before_action :setup_grid
   before_action :enable_note_selector, only: %w[majors minors]
+  before_action :chord_bank, only: %w[majors minors]
 
-  def welcome
-  end
+  def welcome; end
 
   def notes
     # ensuring that the grid is always 8 in width
@@ -17,8 +17,15 @@ class PageController < ApplicationController
     @two_finger = Controller::Grid.new(width: 2, note_bank: @note_bank).build.reverse
   end
 
-  def majors; end
-  def minors; end
+  def majors
+    @chord = chord_bank.find('Major')
+    render 'chord_viewer'
+  end
+
+  def minors
+    @chord = chord_bank.find('Minor')
+    render 'chord_viewer'
+  end
 
   private
 
@@ -26,6 +33,10 @@ class PageController < ApplicationController
     @note_bank = Theory::NoteBank.new
     session[:grid_width] = 8 if session[:grid_width].nil?
     @grid = Controller::Grid.new(width: session[:grid_width], note_bank: @note_bank).build.reverse
+  end
+
+  def chord_bank
+    @chord_bank = Theory::ChordBank.new
   end
 
   def enable_note_selector
