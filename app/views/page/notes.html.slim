@@ -11,7 +11,7 @@
 
         = segment
           .notes
-            - @bank.notes.each do |note|
+            - @note_bank.notes.each do |note|
               .note class=""
                 = note.alias
 
@@ -24,7 +24,7 @@
 
         = segment 'secondary'
           .notes
-            - @bank.notes.each do |note|
+            - @note_bank.notes.each do |note|
               .note
                 = note.name
 
@@ -39,7 +39,7 @@
 
         = segment 'secondary'
           .notes
-            - @bank.notes.each do |note|
+            - @note_bank.notes.each do |note|
               .note class="#{'black' unless note.natural}"
                 = note.name
 
@@ -108,7 +108,7 @@
           | The color will make things easier to remember, by associating letters with colors.
         = segment
           .notes
-            - @bank.notes.each do |note|
+            - @note_bank.notes.each do |note|
               .note style="background-color: #{note.color}; color: #{note.text_color};"
                 = note.name
 
