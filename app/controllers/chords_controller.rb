@@ -1,6 +1,6 @@
 class ChordsController < ApplicationController
-  before_action :enable_note_selector, only: %w[majors minors]
 
+  before_action :enable_note_selector, only: %w[show]
   before_action :setup_grid, only: %w[show]
   before_action :setup_chord_bank, only: %w[show]
 
