@@ -1,2 +1,9 @@
-h1 Chords#show
-p Find me in app/views/chords/show.html.slim
+= segment 'basic'
+  = grid
+    = row
+      = column size: 8, class: 'center aligned centered'
+        = h1 text: "#{@chord.name} Chords (#{@chord.pattern.join('-')})"
+
+        -(0..11).step do |note|
+          = render partial: 'partials/grid', locals: {note: @note_bank.note_at_position(note), prefix: 'maj', shape: @chord.notes}
+          br

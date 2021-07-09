@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get 'minors', to: 'page#minors'
 
   get 'width', action: 'set_width', controller: :grid
+
+  resources :chords
 end
