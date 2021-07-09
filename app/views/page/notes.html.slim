@@ -1,8 +1,9 @@
 = container
   = grid
     = row
-      = column size: 16
-        = h1 text: 'What are notes?'
+      = column size: 12, class: 'centered'
+        = h1 text: 'What are Notes 🎵', class: 'horizontal divider massive'
+        br
         = list 'huge bulleted'
           = item
             | At their simplest form notes are <b>symbols</b> for a sounds.
@@ -29,13 +30,12 @@
                 = note.name
 
         br
+        = h2 text: 'Sharps<sup>♯</sup> and Flats<sup>♭</sup>'.html_safe
         = list 'huge bulleted'
           = item
-            | The notes with the hash sign (#) are called sharps.
+            | The notes with the hash sign (♯) are called sharps.
           = item
             | The notes with without sharps are called natural notes.
-          = item
-            | The distance from C to B is called an <b>Octave</b>
 
         = segment 'secondary'
           .notes
@@ -46,11 +46,37 @@
         br
         = list 'huge bulleted'
           = item
+            | Sharps notes (♯) have alternate name, called flats (♭).
+          = item
+            | For example, is C♯ an equivalent to D♭.
+        = segment 'secondary'
+          .notes
+            - @note_bank.notes.each do |note|
+              .note class="#{'black' unless note.natural}"
+                = note.alt_name
+        br
+        = list 'huge bulleted'
+          = item
+            | In music theory the notes C♯ and D♭ are considered <i>enharmonic</i>, meaning they represent them same pitch.
+          = item
+            | The main purpose of <i>enharmonic</i> notes are to improve readability.
+          = item
+            | For example, sequence B♭-B♮-B♭ is easier to read with enharmonic spelling of B♭-C♭-B♭.
+
+        br
+        br
+        = h1 text: 'The Octaves 🎶', class: 'horizontal divider massive'
+        br
+        = list 'huge bulleted'
+          = item
             | On a grid controller the notes are laid out from <b>bottom left to top right</b>.
           = item
-            | They start with the <b>C, go up to B</b>, and then repeat.
+            | They start with the C, go up to B, and then repeat.
+          = item
+            | The distance from C to B is called an <b>Octave</b>.
           = item
             | Every time the pattern repeats an new Octave begins.
+        br
 
         = segment 'secondary compact'
           table.grid
@@ -65,8 +91,8 @@
           = item
             | Lets highlight the C to make it easier to see every time the notes wrap around.
           = item
-            | We're going to the octave number in parenthesis to make it easier to visualize octave changes.
-
+            | We're going to put the octave number in parenthesis to make it easier to visualize octave changes.
+        br
         = segment 'secondary compact'
           table.grid.numbered
             - @grid.each_with_index do |row, row_index|
@@ -83,26 +109,18 @@
           = item
             | The note (or the flavor) itself doesn't change, just how it sounds.
           = item
-            | We can draw a parallel with food. Things can be salty, and get saltier (pitch going up), but they don't magically become sweet (another note).
+            | Food can be salty, and get saltier (pitch going up), but it doesn't magically become sweet (another note).
           = item
             | Below is the note C played along 6 different octaves using the Piano voicing.
 
-          br
-          br
-          iframe width="700" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1082513785&color=%23584b2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-          br
-          br
-
-        = h1 text: 'Take your time'
-        = list 'huge bulleted'
-          = item
-            | Learning to use the launchpad is no different then using a computer keyboard.
-          = item
-            | In the beginning you will look at the keyboard to find the notes you are looking for.
-          = item
-            | Over time you will develop muscle memmory, and will know which button to press based on the sound you want to produce.
         br
-        = h2 text: "Now lets add more color"
+        iframe width="700" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1082513785&color=%23584b2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        br
+
+        br
+        br
+        = h1 text: "Lets Add Color 🎨", class: 'horizontal divider massive'
+        br
         = list 'huge bulleted'
           = item
           | The color will make things easier to remember, by associating letters with colors.
@@ -112,7 +130,6 @@
               .note style="background-color: #{note.color}; color: #{note.text_color};"
                 = note.name
 
-        br
         br
 
         = list 'huge bulleted'
@@ -126,3 +143,15 @@
               - row.each do |column|
                 td style="background-color: #{column.color}; color: #{column.text_color};"
                   = column.name
+        br
+        br
+    = row
+      = column size: 12, class: 'centered'
+        = h1 text: 'Take Your Time 🧘‍♀', class: 'horizontal divider massive'
+        = list 'huge bulleted'
+          = item
+            | Learning to use the grid controller is no different then using a computer keyboard.
+          = item
+            | In the beginning you will look at the keyboard to find the notes you are looking for.
+          = item
+            | Over time you will develop muscle memmory, and will know which button to press based on the sound you want to produce.
