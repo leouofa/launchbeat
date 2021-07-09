@@ -7,6 +7,7 @@ module Theory
     # for notes to make it easier to learn
     def initialize(options = {})
       @name       = options[:name] || 'c'
+      @alt_name   = options[:alt_name]
       @alias      = options[:alias] || '1'
       @natural    = options[:natural]
       @color = options[:color]
@@ -14,5 +15,13 @@ module Theory
     end
 
     attr_reader :name, :alias, :natural, :color, :text_color
+
+    # returns the enharmonic name for un-natural notes
+    def alt_name
+      return @name if @natural
+
+      @alt_name
+    end
   end
+
 end
