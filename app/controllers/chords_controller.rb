@@ -1,5 +1,6 @@
 class ChordsController < ApplicationController
 
+  before_action :show_chords
   before_action :enable_note_selector, only: %w[show]
   before_action :setup_grid, only: %w[show]
   before_action :setup_chord_bank, only: %w[show]
@@ -25,6 +26,10 @@ class ChordsController < ApplicationController
   end
 
   def enable_note_selector
-    @note_selector = true
+    @show_note_selector = true
+  end
+
+  def show_chords
+    @show_chords = true
   end
 end
