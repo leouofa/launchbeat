@@ -15,7 +15,9 @@ gem 'redis', '~> 4.0'
 # Presentation
 gem 'sassc'
 gem 'slim-rails'
-gem 'rapid_ui'
+
+# gem 'rapid_ui', path: '~/src/hobbies/rapid_ui'
+gem 'rapid_ui', git: 'https://github.com/realstorypro/rapid-ui.git'
 gem 'view_component'
 gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 gem 'simple_form'

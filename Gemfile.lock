@@ -8,6 +8,15 @@ GIT
       railties (>= 5.2)
       semantic_range (>= 2.3.0)
 
+GIT
+  remote: https://github.com/realstorypro/rapid-ui.git
+  revision: 70384c5b1f1753f77ee9c5c4856050a9323e91fe
+  specs:
+    rapid_ui (1.0.1)
+      byebug
+      hashie
+      view_component
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -154,10 +163,6 @@ GEM
       rake (>= 12.2)
       thor (~> 1.0)
     rake (13.0.6)
-    rapid_ui (1.0.0)
-      byebug
-      hashie
-      view_component
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -167,15 +172,15 @@ GEM
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
-    selenium-webdriver (4.2.0)
+    selenium-webdriver (4.2.1)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     semantic_range (3.0.0)
-    simple_form (5.0.0)
-      actionpack (>= 5.0)
-      activemodel (>= 5.0)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     slim (4.1.0)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
@@ -200,7 +205,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    view_component (2.55.0)
+    view_component (2.56.1)
       activesupport (>= 5.0.0, < 8.0)
       method_source (~> 1.0)
     web-console (4.2.0)
@@ -232,7 +237,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4)
-  rapid_ui
+  rapid_ui!
   redis (~> 4.0)
   sassc
   selenium-webdriver

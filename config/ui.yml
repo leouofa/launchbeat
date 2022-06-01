@@ -10,17 +10,17 @@ ui:
   row:
     tag: div
     css_class: 'row'
-    
+    ui: false
 
   column:
     tag: div
     css_class: 'wide column'
-    
+    ui: false
 
   div:
     tag: div
     css_class: ''
-    
+    ui: false
 
 
   # base items
@@ -56,11 +56,12 @@ ui:
   text:
     tag: p
     css_class: 'text'
+    ui: false
 
   icon:
     tag: i
     css_class: 'icon'
-    
+    ui: false
 
   table:
     tag: table
@@ -81,7 +82,7 @@ ui:
   menu:
     tag: div
     css_class: 'menu'
-    
+    ui: false
 
   list:
     tag: div
@@ -102,22 +103,22 @@ ui:
   meta:
     tag: div
     css_class: 'meta'
-    
+    ui: false
 
   content:
     tag: div
     css_class: 'content'
-    
+    ui: false
 
   description:
     tag: div
     css_class: 'description'
-    
+    ui: false
 
   extra:
     tag: div
     css_class: 'extra'
-    
+    ui: false
 
   segments:
     tag: div
@@ -134,7 +135,7 @@ ui:
   item:
     tag: div
     css_class: 'item'
-    
+    ui: false
 
   cards:
     tag: div
@@ -151,12 +152,12 @@ ui:
   event:
     tag: div
     css_class: 'event'
-    
+    ui: false
 
   date:
     tag: div
     css_class: 'date'
-    
+    ui: false
 
   statistics:
     tag: div
@@ -165,7 +166,7 @@ ui:
   statistic:
     tag: div
     css_class: 'statistic'
-    
+    ui: false
 
   loader:
     tag: div
@@ -184,27 +185,27 @@ ui:
   page:
     tag: div
     css_class: page
-    
+    ui: false
 
   fragment:
     tag: div
     css_class: fragment
-    
+    ui: false
 
   component:
     tag: div
     css_class: 'component'
-    
+    ui: false
 
   widget:
     tag: div
     css_class: 'widget'
-    
+    ui: false
 
   element:
     tag: div
     css_class: 'element'
-    
+    ui: false
 
   # forms
   form:
@@ -219,7 +220,7 @@ ui:
     tag: input
     css_class: ''
     type: 'hidden'
-    
+    ui: false
 
   textarea:
     tag: textarea
@@ -233,43 +234,43 @@ ui:
   wrapper:
     tag: div
     css_class: 'wrapper'
-    
-  
+    ui: false
+
   figure:
     tag: figure
     css_class: ''
-    
+    ui: false
 
 
   overlay:
     tag: div
     css_class: 'overlay'
-    
+    ui: false
 
   title:
     tag: div
     css_class: 'title'
-    
+    ui: false
 
   summary:
     tag: div
     css_class: 'summary'
-    
+    ui: false
 
   color:
     tag: span
     css_class: 'color'
-    
+    ui: false
 
   separator:
     tag: div
     css_class: 'separator'
-    
+    ui: false
 
   dynamic:
     tag: div
     css_class: 'dynamic'
-    
+    ui: false
 
   left:
     tag: div
@@ -282,9 +283,9 @@ ui:
   mobile:
     tag: div
     css_class: 'mobile'
-    
+    ui: false
 
   desktop:
     tag: div
     css_class: 'desktop'
-    
+    ui: false
