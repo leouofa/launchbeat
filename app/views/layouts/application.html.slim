@@ -10,22 +10,22 @@ html
     = stylesheet_pack_tag 'css', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Karla:wght@300;400;600&display=swap', media: 'none', onload: "if(media!='all')media='all'"
   body
-    = menu ui: :on, class: 'inverted large'
+    =r ux.menu ui: true, class: 'inverted large'
       = link_to 'Home', root_path, class: 'ui item'
       = link_to 'Notes', notes_path, class: 'ui item'
       = link_to 'Tunings', tunings_path, class: 'ui item'
       = link_to 'Chords', chords_path, class: 'ui item'
       = link_to 'Scales', notes_path, class: 'ui item'
       = link_to 'Tutorials', notes_path, class: 'ui item'
-      = menu 'right'
-        = item class: 'header', text: 'Overlap'
+      =r ux.menu 'right'
+        =r ux.item class: 'header', text: 'Overlap'
         = link_to 'Sequential', width_path(to: 8), class: 'ui item'
         = link_to '2 Finger', width_path(to: 2), class: 'ui item'
         = link_to '3 Finger', width_path(to: 3), class: 'ui item'
         = link_to '4 Finger', width_path(to: 4), class: 'ui item'
         = link_to '5 Finger', width_path(to: 5), class: 'ui item'
-    = menu ui: :on, class: 'secondary large'
-      = item class: 'header', text: 'Chords'
+    =r ux.menu ui: true, class: 'secondary large'
+      =r ux.item class: 'header', text: 'Chords'
       = link_to 'Maj', chord_path('major'), class: 'ui item'
       = link_to 'Min', chord_path('minor'), class: 'ui item'
       = link_to 'Dim', chord_path('diminished'), class: 'ui item'
@@ -38,19 +38,19 @@ html
       = link_to 'x9', chord_path('9'), class: 'ui item'
       = link_to 'x5', chord_path('5'), class: 'ui item'
     - if @note_selector
-      =divider
-      = menu ui: :on, class: 'secondary'
-        = item class: 'header', text: 'Root'
+      =r ux.divider
+      =r ux.menu ui: true, class: 'secondary'
+        =r ux.item class: 'header', text: 'Root'
         -(0..11).step do |note|
           = render partial: 'partials/note_selector', locals: {note: @note_bank.note_at_position(note)}
-      = divider
+      =r ux.divider
     - else
-      = divider
+      =r ux.divider
     br
     = yield
     br
     br
-    = segment 'inverted center aligned footer'
-      = h5
+    =r ux.segment 'inverted center aligned footer'
+      =r ux.h5
         ="❤️ LaunchBeat is an #{link_to 'Open Source Project', 'https://github.com/realstorypro/launch-beat', target: '_blank'} sponsored by #{link_to 'Story Pro',"https://www.storypro.io", target: '_blank'} ❤️".html_safe
 

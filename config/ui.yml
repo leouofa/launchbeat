@@ -1,5 +1,4 @@
-defaults:
-  # grid items
+ui:
   container:
     tag: div
     css_class: 'container'
@@ -11,12 +10,18 @@ defaults:
   row:
     tag: div
     css_class: 'row'
-    ui: :off
+    ui: false
 
   column:
     tag: div
     css_class: 'wide column'
-    ui: :off
+    ui: false
+
+  div:
+    tag: div
+    css_class: ''
+    ui: false
+
 
   # base items
   header:
@@ -25,19 +30,19 @@ defaults:
 
   h1:
     tag: h1
-    css_class: 'header huge'
+    css_class: 'header'
 
   h2:
     tag: h2
-    css_class: 'header large'
+    css_class: 'header'
 
   h3:
     tag: h3
-    css_class: 'header medium'
+    css_class: 'header'
 
   h4:
     tag: h4
-    css_class: 'header small'
+    css_class: 'header'
 
   h5:
     tag: h5
@@ -51,28 +56,20 @@ defaults:
   text:
     tag: p
     css_class: 'text'
-    ui: :off
+    ui: false
 
   icon:
     tag: i
     css_class: 'icon'
-    ui: :off
+    ui: false
 
   table:
     tag: table
     css_class: table
 
-  tab:
-    tag: div
-    css_class: 'tab'
-
   divider:
     tag: div
     css_class: 'divider'
-
-  button:
-    tag: button
-    css_class: 'button'
 
   buttons:
     tag: div
@@ -82,14 +79,10 @@ defaults:
     tag: div
     css_class: 'dropdown'
 
-  sidebar :
-    tag: div
-    css_class: 'sidebar'
-
   menu:
     tag: div
     css_class: 'menu'
-    ui: :off
+    ui: false
 
   list:
     tag: div
@@ -110,22 +103,22 @@ defaults:
   meta:
     tag: div
     css_class: 'meta'
-    ui: :off
+    ui: false
 
   content:
     tag: div
     css_class: 'content'
-    ui: :off
+    ui: false
 
   description:
     tag: div
     css_class: 'description'
-    ui: :off
+    ui: false
 
   extra:
     tag: div
     css_class: 'extra'
-    ui: :off
+    ui: false
 
   segments:
     tag: div
@@ -142,7 +135,7 @@ defaults:
   item:
     tag: div
     css_class: 'item'
-    ui: :off
+    ui: false
 
   cards:
     tag: div
@@ -159,17 +152,62 @@ defaults:
   event:
     tag: div
     css_class: 'event'
-    ui: :off
+    ui: false
 
   date:
     tag: div
     css_class: 'date'
-    ui: :off
+    ui: false
 
-  breadcrumb:
+  statistics:
     tag: div
-    css_class: 'breadcrumb'
+    css_class: 'statistics'
 
+  statistic:
+    tag: div
+    css_class: 'statistic'
+    ui: false
+
+  loader:
+    tag: div
+    css_class: 'loader'
+
+  label:
+    tag: div
+    css_class: 'label'
+
+  ribbon:
+    tag: div
+    css_class: 'ribbon label'
+
+
+  # core classes used by the internal css framework
+  page:
+    tag: div
+    css_class: page
+    ui: false
+
+  fragment:
+    tag: div
+    css_class: fragment
+    ui: false
+
+  component:
+    tag: div
+    css_class: 'component'
+    ui: false
+
+  widget:
+    tag: div
+    css_class: 'widget'
+    ui: false
+
+  element:
+    tag: div
+    css_class: 'element'
+    ui: false
+
+  # forms
   form:
     tag: form
     css_class: 'form'
@@ -178,94 +216,61 @@ defaults:
     tag: div
     css_class: 'input'
 
-  shape:
-    tag: div
-    css_class: 'shape'
+  hidden:
+    tag: input
+    css_class: ''
+    type: 'hidden'
+    ui: false
 
-  sides:
-    tag: div
-    css_class: 'sides'
-    ui: :off
+  textarea:
+    tag: textarea
+    css_class: 'textarea'
 
-  side:
-    tag: div
-    css_class: 'side'
-    ui: :off
-
-
-  steps:
-    tag: div
-    css_class: 'steps'
-
-  step:
-    tag: div
-    css_class: 'step'
-    ui: :off
-
-  sticky:
-    tag: div
-    css_class: 'sticky'
-
+  button:
+    tag: button
+    css_class: 'button'
 
   # non semantic ui components
-
-  fragment:
-    tag: div
-    css_class: fragment
-    ui: :off
-
-  component:
-    tag: div
-    css_class: 'component'
-    ui: :off
-
   wrapper:
     tag: div
     css_class: 'wrapper'
-    ui: :off
+    ui: false
 
-  widget:
-    tag: div
-    css_class: 'widget'
-    ui: :off
+  figure:
+    tag: figure
+    css_class: ''
+    ui: false
+
 
   overlay:
     tag: div
     css_class: 'overlay'
-    ui: :off
+    ui: false
 
   title:
     tag: div
     css_class: 'title'
-    ui: :off
+    ui: false
 
   summary:
     tag: div
     css_class: 'summary'
-    ui: :off
+    ui: false
 
   color:
     tag: span
     css_class: 'color'
-    ui: :off
+    ui: false
 
   separator:
     tag: div
     css_class: 'separator'
-    ui: :off
+    ui: false
 
-  ribbon:
+  dynamic:
     tag: div
-    css_class: 'ribbon label'
-
-  tagging:
-    tag: div
-    css_class: 'label'
-
-  # helper items
-  floated:
-    tag: div
-    css_class: 'floated'
+    css_class: 'dynamic'
+    ui: false
 
   left:
     tag: div
@@ -274,3 +279,13 @@ defaults:
   right:
     tag: div
     css_class: 'right'
+
+  mobile:
+    tag: div
+    css_class: 'mobile'
+    ui: false
+
+  desktop:
+    tag: div
+    css_class: 'desktop'
+    ui: false

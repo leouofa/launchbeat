@@ -1,84 +1,84 @@
-= container
-  = grid
-    = row
-      = column size: 12, class: 'centered'
-        = h1 text: 'What are Notes 🎵', class: 'horizontal divider massive'
+=r ux.container
+  =r ux.grid
+    =r ux.row
+      =r ux.column size: 12, class: 'centered'
+        =r ux.h1 text: 'What are Notes 🎵', class: 'horizontal divider massive'
         br
-        = list 'huge bulleted'
-          = item
+        =r ux.list 'huge bulleted'
+          =r ux.item
             | At their simplest form notes are <b>symbols</b> for a sounds.
-          = item
+          =r ux.item
             | Western music uses 12 notes, to denote 12 distinct sounds.
 
-        = segment
+        =r ux.segment
           .notes
             - @note_bank.notes.each do |note|
               .note class=""
                 = note.alias
 
         br
-        = list 'huge bulleted'
-          = item
+        =r ux.list 'huge bulleted'
+          =r ux.item
             | Instead of using numbers we can use letters to represent them.
-          = item
+          =r ux.item
             | Its easiest to think of it as a musical alphabet.
 
-        = segment 'secondary'
+        =r ux.segment 'secondary'
           .notes
             - @note_bank.notes.each do |note|
               .note
                 = note.name
 
         br
-        = h2 text: 'Sharps<sup>♯</sup> and Flats<sup>♭</sup>'.html_safe
-        = list 'huge bulleted'
-          = item
+        =r ux.h2 text: 'Sharps<sup>♯</sup> and Flats<sup>♭</sup>'.html_safe
+        =r ux.list 'huge bulleted'
+          =r ux.item
             | The notes with the hash sign (♯) are called sharps.
-          = item
+          =r ux.item
             | The notes with without sharps are called natural notes.
 
-        = segment 'secondary'
+        =r ux.segment 'secondary'
           .notes
             - @note_bank.notes.each do |note|
               .note class="#{'black' unless note.natural}"
                 = note.name
 
         br
-        = list 'huge bulleted'
-          = item
+        =r ux.list 'huge bulleted'
+          =r ux.item
             | Sharps notes (♯) have alternate name, called flats (♭).
-          = item
+          =r ux.item
             | For example, is C♯ an equivalent to D♭.
-        = segment 'secondary'
+        =r ux.segment 'secondary'
           .notes
             - @note_bank.notes.each do |note|
               .note class="#{'black' unless note.natural}"
                 = note.alt_name
         br
-        = list 'huge bulleted'
-          = item
+        =r ux.list 'huge bulleted'
+          =r ux.item
             | In music theory the notes C♯ and D♭ are considered <i>enharmonic</i>, meaning they represent them same pitch.
-          = item
+          =r ux.item
             | The main purpose of <i>enharmonic</i> notes are to improve readability.
-          = item
+          =r ux.item
             | For example, sequence B♭-B♮-B♭ is easier to read with enharmonic spelling of B♭-C♭-B♭.
 
         br
         br
-        = h1 text: 'The Octaves 🎶', class: 'horizontal divider massive'
+        =r ux.h1 text: 'The Octaves 🎶', class: 'horizontal divider massive'
         br
-        = list 'huge bulleted'
-          = item
+        =r ux.list 'huge bulleted'
+          =r ux.item
             | On a grid controller the notes are laid out from <b>bottom left to top right</b>.
-          = item
+          =r ux.item
             | They start with the C, go up to B, and then repeat.
-          = item
+          =r ux.item
             | The distance from C to B is called an <b>Octave</b>.
-          = item
+          =r ux.item
             | Every time the pattern repeats an new Octave begins.
         br
 
-        = segment 'secondary compact'
+        =r ux.segment 'secondary compact'
           table.grid
             - @grid.each do |row|
               tr
@@ -87,13 +87,13 @@
                     = column.name
 
         br
-        = list 'huge bulleted'
-          = item
+        =r ux.list 'huge bulleted'
+          =r ux.item
             | Lets highlight the C to make it easier to see every time the notes wrap around.
-          = item
+          =r ux.item
             | We're going to put the octave number in parenthesis to make it easier to visualize octave changes.
         br
-        = segment 'secondary compact'
+        =r ux.segment 'secondary compact'
           table.grid.numbered
             - @grid.each_with_index do |row, row_index|
               tr
@@ -103,14 +103,14 @@
                       = column.name
 
         br
-        = list 'huge bulleted'
-          = item
+        =r ux.list 'huge bulleted'
+          =r ux.item
             | As the octave increases so does the <b>Pitch</b> making the note sound <b>Higher</b>.
-          = item
+          =r ux.item
             | The note (or the flavor) itself doesn't change, just how it sounds.
-          = item
+          =r ux.item
             | Food can be salty, and get saltier (pitch going up), but it doesn't magically become sweet (another note).
-          = item
+          =r ux.item
             | Below is the note C played along 6 different octaves using the Piano voicing.
 
         br
@@ -119,12 +119,12 @@
 
         br
         br
-        = h1 text: "Lets Add Color 🎨", class: 'horizontal divider massive'
+        =r ux.h1 text: "Lets Add Color 🎨", class: 'horizontal divider massive'
         br
-        = list 'huge bulleted'
-          = item
+        =r ux.list 'huge bulleted'
+          =r ux.item
           | The color will make things easier to remember, by associating letters with colors.
-        = segment
+        =r ux.segment
           .notes
             - @note_bank.notes.each do |note|
               .note style="background-color: #{note.color}; color: #{note.text_color};"
@@ -132,10 +132,10 @@
 
         br
 
-        = list 'huge bulleted'
-          = item
+        =r ux.list 'huge bulleted'
+          =r ux.item
             | Now lets re-arange things back into a grid.
-          = item
+          =r ux.item
             | We'll be using this notation throughout this site.
         table.grid
           - @grid.each do |row|
@@ -145,13 +145,13 @@
                   = column.name
         br
         br
-    = row
-      = column size: 12, class: 'centered'
-        = h1 text: 'Take Your Time 🧘‍♀', class: 'horizontal divider massive'
-        = list 'huge bulleted'
-          = item
+    =r ux.row
+      =r ux.column size: 12, class: 'centered'
+        =r ux.h1 text: 'Take Your Time 🧘‍♀', class: 'horizontal divider massive'
+        =r ux.list 'huge bulleted'
+          =r ux.item
             | Learning to use the grid controller is no different then using a computer keyboard.
-          = item
+          =r ux.item
             | In the beginning you will look at the keyboard to find the notes you are looking for.
-          = item
+          =r ux.item
             | Over time you will develop muscle memmory, and will know which button to press based on the sound you want to produce.

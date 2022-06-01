@@ -1,69 +1,69 @@
-= container
-  = grid
-    = row
-      = column size: 12
-        = h1 text: 'Tuning the Launchpad'
-        = list 'huge bulleted relaxed'
-          = item
+=r ux.container
+  =r ux.grid
+    =r ux.row
+      =r ux.column size: 12
+        =r ux.h1 text: 'Tuning the Launchpad'
+        =r ux.list 'huge bulleted relaxed'
+          =r ux.item
             | Its easiest to think of tuning as an arrangement of notes on the launchpad.
-          = item
+          =r ux.item
             | Both <i>Launchpad X</i> and <i>Launchpad Pro</i> come with 5 different tunings, optimized for different types of play.
-          = item
+          =r ux.item
             | In the manual the tunings are referred to as <b>Overlap Layouts</b>.
         = image_tag 'overlap_mode.png', class: 'ui image big'
-        = list 'relaxed big bulleted'
-          = item
+        =r ux.list 'relaxed big bulleted'
+          =r ux.item
             | Launchpad Mini does not have the note mode, but it does have a custom mode. You can use it to create a layout that mirriors any of the tunings of Launchpad X or Launchpad Pro.
 
-    = row
-      = column size: 16
-        = divider
+    =r ux.row
+      =r ux.column size: 16
+        =r ux.divider
 
-    = row
-      = column size: 8
-        = segment 'secondary padded'
-          = h2 text: 'Accessing the Note Mode on Launchpad X'
-          = list 'huge bulleted suffixed'
-            = item
+    =r ux.row
+      =r ux.column size: 8
+        =r ux.segment 'secondary padded'
+          =r ux.h2 text: 'Accessing the Note Mode on Launchpad X'
+          =r ux.list 'huge bulleted suffixed'
+            =r ux.item
               | Press and Hold the <b>Note</b> Button.
-            = item
+            =r ux.item
               | Ensure that the scale toggle is off (the button on the top right hand side is red).
-      = column size: 8
-        = segment 'secondary padded'
-          = h2 text: 'Accessing the Note Mode on Launchpad Pro'
-          = list 'huge bulleted suffixed'
-            = item
+      =r ux.column size: 8
+        =r ux.segment 'secondary padded'
+          =r ux.h2 text: 'Accessing the Note Mode on Launchpad Pro'
+          =r ux.list 'huge bulleted suffixed'
+            =r ux.item
               | Press <b>Shift</b> button, and then press the <b>Note</b> Button.
-            = item
+            =r ux.item
               | Ensure that the scale toggle is off (the button on the top right hand side is red).
 
-    = row
-      = column size: 16
-        = divider
-    = row
-      = column size: 16
-        = h1 text: 'Sequential Arrangement'
-        = list 'huge bulleted suffized'
-          = item
+    =r ux.row
+      =r ux.column size: 16
+        =r ux.divider
+    =r ux.row
+      =r ux.column size: 16
+        =r ux.h1 text: 'Sequential Arrangement'
+        =r ux.list 'huge bulleted suffized'
+          =r ux.item
             | The notes repeat in sequence and do not overlap.
-          = item
+          =r ux.item
             | 5 and a half octaves are available.
-          = item
+          =r ux.item
             | Good for playing with both hands.
-          = item
+          =r ux.item
             | Chords are difficult to play with one hand.
-        = segment 'secondary compact'
+        =r ux.segment 'secondary compact'
           table.grid
             - @sequential.each do |row|
               tr
                 - row.each do |column|
                   td style="background-color: #{column.color}; color: #{column.text_color};"
                     = column.name
-    = row
-      = column size: 16
-        = h1 text: 'Two Finger Layout'
-        = list 'huge bulleted suffized'
-        = segment 'secondary compact'
+    =r ux.row
+      =r ux.column size: 16
+        =r ux.h1 text: 'Two Finger Layout'
+        =r ux.list 'huge bulleted suffized'
+        =r ux.segment 'secondary compact'
           table.grid
               - @two_finger.each do |row|
                 tr
@@ -72,10 +72,10 @@
                       = column.name
 
 
-    = row
-      = column size: 16
-        = divider
+    =r ux.row
+      =r ux.column size: 16
+        =r ux.divider
 
-        = h2 text: 'Additional Resources'
-        = h3 text: 'Launchpad Mini Custom Mode Overview'
+        =r ux.h2 text: 'Additional Resources'
+        =r ux.h3 text: 'Launchpad Mini Custom Mode Overview'
         iframe width="560" height="315" src="https://www.youtube.com/embed/mHvqwH0xQq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
