@@ -1,0 +1,30 @@
+$menu-base-height: 48px
+
+body
+  padding-top: $menu-base-height * 2
+
+  &.with-chord-selector
+    padding-top: calc(#{$menu-base-height} * 3)
+
+    &.with-note-selector
+      padding-top: calc(#{$menu-base-height} * 3.5)
+
+
+.ui.navigation.inverted
+  height: $menu-base-height
+  background-color: rgba(162,0,255,0.6) !important
+  background: linear-gradient(120deg, rgba(162,0,255,0.8) 0%, rgba(169,20,255,0.8) 100%)
+  backdrop-filter: blur(8px)
+
+.sub-navigation.top.fixed
+  background: #eeeeeecc
+  backdrop-filter: blur(8px)
+  top: $menu-base-height
+  height: $menu-base-height
+  border-bottom: 1px solid #dadada
+
+.sub-sub-navigation.top.fixed
+  top: calc(#{$menu-base-height} * 2)
+  height: $menu-base-height
+  background: #f6f6f6cc
+  backdrop-filter: blur(8px)
