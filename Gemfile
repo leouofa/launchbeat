@@ -3,20 +3,26 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+ruby '3.0.3'
+
+gem 'rails', '~> 6.1.4'
 
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'good_ui', github: 'realstorypro/good-ui'
-gem 'jbuilder', '~> 2.7'
-gem 'puma', '~> 5.0'
-gem 'rails', '~> 6.1.1'
-gem 'redis', '~> 4.0'
-gem 'sass-rails', '>= 6'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'turbo-rails'
-gem 'webpacker', '~> 5.0'
-gem 'simple_form', '5.0.0'
+gem 'puma', '~> 5.0'
+gem 'redis', '~> 4.0'
+
+# Presentation
+gem 'sassc'
 gem 'slim-rails'
+gem 'rapid_ui'
+gem 'view_component'
+gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
+gem 'simple_form'
+
+# JS Frameworks
+gem 'sprockets', '~> 4.0'
+gem 'turbo-rails'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
