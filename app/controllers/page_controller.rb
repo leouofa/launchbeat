@@ -13,6 +13,9 @@ class PageController < ApplicationController
   def tunings
     @sequential = Controller::Grid.new(width: 8, note_bank: @note_bank).build.reverse
     @two_finger = Controller::Grid.new(width: 2, note_bank: @note_bank).build.reverse
+    @three_finger = Controller::Grid.new(width: 3, note_bank: @note_bank).build.reverse
+    @four_finger = Controller::Grid.new(width: 4, note_bank: @note_bank).build.reverse
+    @five_finger = Controller::Grid.new(width: 5, note_bank: @note_bank).build.reverse
   end
 
   private

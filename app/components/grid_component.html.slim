@@ -1,0 +1,6 @@
+table.grid
+  - @grid.each do |row|
+    tr
+      - row.each do |column|
+        td style="background-color: #{column.color}; color: #{column.text_color};"
+          = column.name
