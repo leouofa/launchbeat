@@ -1,81 +1,132 @@
-=r ux.container
-  =r ux.grid
-    =r ux.row
-      =r ux.column size: 12
-        =r ux.h1 text: 'Tuning the Launchpad'
-        =r ux.list 'huge bulleted relaxed'
-          =r ux.item
-            | Its easiest to think of tuning as an arrangement of notes on the launchpad.
-          =r ux.item
-            | Both <i>Launchpad X</i> and <i>Launchpad Pro</i> come with 5 different tunings, optimized for different types of play.
-          =r ux.item
-            | In the manual the tunings are referred to as <b>Overlap Layouts</b>.
-        = image_tag 'overlap_mode.png', class: 'ui image big'
-        =r ux.list 'relaxed big bulleted'
-          =r ux.item
-            | Launchpad Mini does not have the note mode, but it does have a custom mode. You can use it to create a layout that mirriors any of the tunings of Launchpad X or Launchpad Pro.
+=r ux.screen 'tunings'
+  =r ux.container
+    =r ux.grid
+      =r ux.row
+        =r ux.column size: 12, class: 'centered'
+          =r ux.segment 'fat stacked'
+            =r ux.h1 text: 'Tuning the Launchpad 🛠', class: 'horizontal divider'
+            =r ux.list 'huge bulleted relaxed'
+              =r ux.item
+                | Its easiest to think of tuning as an arrangement of notes on the launchpad.
+              =r ux.item
+                | Both <em>Launchpad X</em> and <em>Launchpad Pro</em> come with 5 different tunings, optimized for different types of play.
+              =r ux.item
+                | In the manual the tunings are referred to as <strong>Overlap Layouts</strong>.
+            br
+            = image_tag 'overlap_mode.png', class: 'ui image fluid'
+            br
+            =r ux.list 'huge relaxed bulleted'
+              =r ux.item
+                | <em>Launchpad Mini</em> does not have the note mode, but it does have a custom mode. You can use it to create a layout that mirriors any of the tunings of Launchpad X or Launchpad Pro.
+            br
+            iframe width="100%" height="315" src="https://www.youtube.com/embed/mHvqwH0xQq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
 
-    =r ux.row
-      =r ux.column size: 16
-        =r ux.divider
+      =r ux.row
+        =r ux.column size: 10, class: 'centered'
+          br
+          br
+          =r ux.divider
+          br
 
-    =r ux.row
-      =r ux.column size: 8
-        =r ux.segment 'secondary padded'
-          =r ux.h2 text: 'Accessing the Note Mode on Launchpad X'
-          =r ux.list 'huge bulleted suffixed'
-            =r ux.item
-              | Press and Hold the <b>Note</b> Button.
-            =r ux.item
-              | Ensure that the scale toggle is off (the button on the top right hand side is red).
-      =r ux.column size: 8
-        =r ux.segment 'secondary padded'
-          =r ux.h2 text: 'Accessing the Note Mode on Launchpad Pro'
-          =r ux.list 'huge bulleted suffixed'
-            =r ux.item
-              | Press <b>Shift</b> button, and then press the <b>Note</b> Button.
-            =r ux.item
-              | Ensure that the scale toggle is off (the button on the top right hand side is red).
+      =r ux.row
+        =r ux.column size: 8
+          =r ux.segment 'secondary fat mode stacked tall'
+            =r ux.h2 text: 'Accessing the Note Mode on Launchpad X'
+            =r ux.list 'huge bulleted suffixed'
+              =r ux.item
+                | Press and Hold the <b>Note</b> Button.
+              =r ux.item
+                | Ensure that the scale toggle is off (the button on the top right hand side is red).
+        =r ux.column size: 8
+          =r ux.segment 'secondary fat mode stacked tall'
+            =r ux.h2 text: 'Accessing the Note Mode on Launchpad Pro'
+            =r ux.list 'huge bulleted suffixed'
+              =r ux.item
+                | Press <b>Shift</b> button, and then press the <b>Note</b> Button.
+              =r ux.item
+                | Ensure that the scale toggle is off (the button on the top right hand side is red).
 
-    =r ux.row
-      =r ux.column size: 16
-        =r ux.divider
-    =r ux.row
-      =r ux.column size: 16
-        =r ux.h1 text: 'Sequential Arrangement'
-        =r ux.list 'huge bulleted suffized'
-          =r ux.item
-            | The notes repeat in sequence and do not overlap.
-          =r ux.item
-            | 5 and a half octaves are available.
-          =r ux.item
-            | Good for playing with both hands.
-          =r ux.item
-            | Chords are difficult to play with one hand.
-        =r ux.segment 'secondary compact'
-          table.grid
-            - @sequential.each do |row|
-              tr
-                - row.each do |column|
-                  td style="background-color: #{column.color}; color: #{column.text_color};"
-                    = column.name
-    =r ux.row
-      =r ux.column size: 16
-        =r ux.h1 text: 'Two Finger Layout'
-        =r ux.list 'huge bulleted suffized'
-        =r ux.segment 'secondary compact'
-          table.grid
-              - @two_finger.each do |row|
-                tr
-                  - row.each do |column|
-                    td style="background-color: #{column.color}; color: #{column.text_color};"
-                      = column.name
+      =r ux.row
+        =r ux.column size: 12, class: 'centered'
+          br
+          =r ux.divider
+      =r ux.row
+        =r ux.column computer: 11, tablet: 16, mobile: 16, class: 'centered'
+          =r ux.segment 'fat stacked'
+            =r ux.h1 text: 'Sequential Arrangement 🚆', class: 'horizontal divider'
+            =r ux.list 'huge bulleted suffized'
+              =r ux.item
+                | Notes appear in sequence and do not repeat.
+              =r ux.item
+                | 5½ octaves are available. The most of any other arrangement.
+              =r ux.item
+                | Good for playing with both hands.
+              =r ux.item
+                | Many chords may be difficult to play with one hand.
+            br
+            = render(GridComponent.new(width: 8))
+
+      =r ux.row
+        =r ux.column computer: 11, tablet: 16, mobile: 16, class: 'centered'
+          br
+          =r ux.segment 'fat'
+            =r ux.h1 text: 'Two Finger Layout ✌️', class: 'horizontal divider'
+            =r ux.list 'huge bulleted suffixed'
+              =r ux.item
+                | 1½ Octaves are available.
+              =r ux.item
+                | The same note may be repeated up to 4 times.
+              =r ux.item
+                | Most chord shapes are available for the same chord.
+            br
+            = render(GridComponent.new(width: 2))
+
+      =r ux.row
+        =r ux.column computer: 11, tablet: 16, mobile: 16, class: 'centered'
+          br
+          =r ux.segment 'fat'
+            =r ux.h1 text: 'Three Finger Layout 🫰️', class: 'horizontal divider'
+            =r ux.list 'huge bulleted suffixed'
+              =r ux.item
+                | 2½ Octaves are available.
+              =r ux.item
+                | The same note may be repeated up to 3 times.
+              =r ux.item
+                | Fewer chord shapes are available for the same chord.
+            br
+            = render(GridComponent.new(width: 3))
 
 
-    =r ux.row
-      =r ux.column size: 16
-        =r ux.divider
+      =r ux.row
+        =r ux.column computer: 11, tablet: 16, mobile: 16, class: 'centered'
+          br
+          =r ux.segment 'fat'
+            =r ux.h1 text: 'Four Finger Layout ✊️', class: 'horizontal divider'
+            =r ux.list 'huge bulleted suffixed'
+              =r ux.item
+                | 3 Octaves are available.
+              =r ux.item
+                | The same note may be repeated up to 2 times.
+              =r ux.item
+                | Less chord shapes are available for the same chord.
+              =r ux.item
+                | The grid is split in half making it the easiest to play with both hands.
+            br
+            = render(GridComponent.new(width: 4))
 
-        =r ux.h2 text: 'Additional Resources'
-        =r ux.h3 text: 'Launchpad Mini Custom Mode Overview'
-        iframe width="560" height="315" src="https://www.youtube.com/embed/mHvqwH0xQq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+      =r ux.row
+        =r ux.column computer: 11, tablet: 16, mobile: 16, class: 'centered'
+          br
+          =r ux.segment 'fat'
+            =r ux.h1 text: 'Five Finger Layout 🖐️', class: 'horizontal divider'
+            =r ux.list 'huge bulleted suffixed'
+              =r ux.item
+                | 4½ Octaves are available.
+              =r ux.item
+                | The same note may be repeated only once.
+              =r ux.item
+                | The least chord shapes are available for the same chord.
+              =r ux.item
+                | Offers good balance between playability and number of octaves available.
+            br
+            = render(GridComponent.new(width: 5))
