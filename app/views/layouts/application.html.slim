@@ -2,7 +2,7 @@ doctype html
 html
   head
     title
-      | LaunchBeat | Electronic Music for Non Musicians
+      | LaunchBEAT | Electronic Music for Everyone
     meta[name="viewport" content="width=device-width,initial-scale=1"]
     = csrf_meta_tags
     = csp_meta_tag
@@ -10,7 +10,10 @@ html
     = stylesheet_pack_tag 'css', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Karla:wght@300;400;600&display=swap', media: 'none', onload: "if(media!='all')media='all'"
   body class="#{'with-chord-selector' if @show_chords} #{'with-note-selector' if @show_note_selector}"
-    =r ux.menu ui: true, class: 'inverted compact violet top fixed navigation'
+    =r ux.menu ui: true, class: 'inverted compact top fixed navigation'
+      = link_to root_path, class: 'ui item'
+        = image_tag('logo.png', alt: 'LaunchBEAT', class: 'ui mini image')
+
       = link_to 'Home', root_path, class: 'ui item'
       = link_to 'Notes', notes_path, class: 'ui item'
       = link_to 'Tunings', tunings_path, class: 'ui item'
@@ -48,5 +51,5 @@ html
     br
     =r ux.segment 'inverted center aligned footer padded'
       =r ux.h5
-        ="❤️ LaunchBeat is an #{link_to 'Open Source Project', 'https://github.com/realstorypro/launch-beat', target: '_blank'} sponsored by #{link_to 'NextWEB',"https://www.nextweb.art", target: '_blank'} ❤️".html_safe
+        ="❤️ LaunchBEAT is an #{link_to 'Open Source Project', 'https://github.com/realstorypro/launch-beat', target: '_blank'} sponsored by #{link_to 'NextWEB',"https://www.nextweb.art", target: '_blank'} ❤️".html_safe
 

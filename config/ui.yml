@@ -1,4 +1,9 @@
 ui:
+  screen:
+    tag: div
+    css_class: 'screen'
+    ui: false
+
   container:
     tag: div
     css_class: 'container'
