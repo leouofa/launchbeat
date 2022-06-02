@@ -1,157 +1,162 @@
-=r ux.container
-  =r ux.grid
-    =r ux.row
-      =r ux.column size: 12, class: 'centered'
-        =r ux.h1 text: 'What are Notes 🎵', class: 'horizontal divider massive'
-        br
-        =r ux.list 'huge bulleted'
-          =r ux.item
-            | At their simplest form notes are <b>symbols</b> for a sounds.
-          =r ux.item
-            | Western music uses 12 notes, to denote 12 distinct sounds.
+=r ux.screen 'notes'
+  =r ux.container
+    =r ux.grid
+      =r ux.row
+        =r ux.column size: 12, class: 'centered'
+          =r ux.h1 text: 'What are Notes 🎵', class: 'horizontal divider massive'
+          br
+          =r ux.list 'huge bulleted'
+            =r ux.item
+              | At their simplest form notes are <b>symbols</b> for a sounds.
+            =r ux.item
+              | Western music uses 12 notes, to denote 12 distinct sounds.
 
-        =r ux.segment
-          .notes
-            - @note_bank.notes.each do |note|
-              .note class=""
-                = note.alias
+          =r ux.segment 'centered'
+            .notes
+              - @note_bank.notes.each do |note|
+                .note class=""
+                  = note.alias
 
-        br
-        =r ux.list 'huge bulleted'
-          =r ux.item
-            | Instead of using numbers we can use letters to represent them.
-          =r ux.item
-            | Its easiest to think of it as a musical alphabet.
+          br
+          =r ux.list 'huge bulleted'
+            =r ux.item
+              | Instead of using numbers we can use letters to represent them.
+            =r ux.item
+              | Its easiest to think of it as a musical alphabet.
 
-        =r ux.segment 'secondary'
-          .notes
-            - @note_bank.notes.each do |note|
-              .note
-                = note.name
+          =r ux.segment 'secondary'
+            .notes
+              - @note_bank.notes.each do |note|
+                .note
+                  = note.name
 
-        br
-        =r ux.h2 text: 'Sharps<sup>♯</sup> and Flats<sup>♭</sup>'.html_safe
-        =r ux.list 'huge bulleted'
-          =r ux.item
-            | The notes with the hash sign (♯) are called sharps.
-          =r ux.item
-            | The notes with without sharps are called natural notes.
+          br
+          =r ux.h2 text: 'Sharps<sup>♯</sup> and Flats<sup>♭</sup>'.html_safe
+          =r ux.list 'huge bulleted'
+            =r ux.item
+              | The notes with the hash sign (♯) are called sharps.
+            =r ux.item
+              | The notes with without sharps are called natural notes.
 
-        =r ux.segment 'secondary'
-          .notes
-            - @note_bank.notes.each do |note|
-              .note class="#{'black' unless note.natural}"
-                = note.name
+          =r ux.segment 'secondary'
+            .notes
+              - @note_bank.notes.each do |note|
+                .note class="#{'black' unless note.natural}"
+                  = note.name
 
-        br
-        =r ux.list 'huge bulleted'
-          =r ux.item
-            | Sharps notes (♯) have alternate name, called flats (♭).
-          =r ux.item
-            | For example, is C♯ an equivalent to D♭.
-        =r ux.segment 'secondary'
-          .notes
-            - @note_bank.notes.each do |note|
-              .note class="#{'black' unless note.natural}"
-                = note.alt_name
-        br
-        =r ux.list 'huge bulleted'
-          =r ux.item
-            | In music theory the notes C♯ and D♭ are considered <i>enharmonic</i>, meaning they represent them same pitch.
-          =r ux.item
-            | The main purpose of <i>enharmonic</i> notes are to improve readability.
-          =r ux.item
-            | For example, sequence B♭-B♮-B♭ is easier to read with enharmonic spelling of B♭-C♭-B♭.
+          br
+          =r ux.list 'huge bulleted'
+            =r ux.item
+              | Sharps notes (♯) have alternate name, called flats (♭).
+            =r ux.item
+              | For example, is C♯ an equivalent to D♭.
+          =r ux.segment 'secondary'
+            .notes
+              - @note_bank.notes.each do |note|
+                .note class="#{'black' unless note.natural}"
+                  = note.alt_name
+          br
+          =r ux.list 'huge bulleted'
+            =r ux.item
+              | In music theory the notes C♯ and D♭ are considered <i>enharmonic</i>, meaning they represent them same pitch.
+            =r ux.item
+              | The main purpose of <i>enharmonic</i> notes are to improve readability.
+            =r ux.item
+              | The sequence B♭-B♮-B♭ is easier to read with enharmonic spelling of B♭-C♭-B♭.
 
-        br
-        br
-        =r ux.h1 text: 'The Octaves 🎶', class: 'horizontal divider massive'
-        br
-        =r ux.list 'huge bulleted'
-          =r ux.item
-            | On a grid controller the notes are laid out from <b>bottom left to top right</b>.
-          =r ux.item
-            | They start with the C, go up to B, and then repeat.
-          =r ux.item
-            | The distance from C to B is called an <b>Octave</b>.
-          =r ux.item
-            | Every time the pattern repeats an new Octave begins.
-        br
+          br
+          br
+          =r ux.h1 text: 'The Octaves 🎶', class: 'horizontal divider massive'
+          br
+          =r ux.list 'huge bulleted'
+            =r ux.item
+              | On a grid controller the notes are laid out from <b>bottom left to top right</b>.
+            =r ux.item
+              | They start with the C, go up to B, and then repeat.
+            =r ux.item
+              | The distance from C to B is called an <b>Octave</b>.
+            =r ux.item
+              | Every time the pattern repeats an new Octave begins.
+          br
 
-        =r ux.segment 'secondary compact'
-          table.grid
-            - @grid.each do |row|
-              tr
-                - row.each do |column|
-                  td class="#{'black' unless column.natural}"
-                    = column.name
-
-        br
-        =r ux.list 'huge bulleted'
-          =r ux.item
-            | Lets highlight the C to make it easier to see every time the notes wrap around.
-          =r ux.item
-            | We're going to put the octave number in parenthesis to make it easier to visualize octave changes.
-        br
-        =r ux.segment 'secondary compact'
-          table.grid.numbered
-            - @grid.each_with_index do |row, row_index|
-              tr
-                - row.each_with_index do |column, column_index|
-                  td class="#{'black' unless column.natural} #{'purple' if column.alias == '1'}"
-                    span class="row-#{row_index} column-#{column_index}"
+          =r ux.segment 'basic compact centered'
+            table.grid
+              - @grid.each do |row|
+                tr
+                  - row.each do |column|
+                    td class="#{'black' unless column.natural}"
                       = column.name
 
-        br
-        =r ux.list 'huge bulleted'
-          =r ux.item
-            | As the octave increases so does the <b>Pitch</b> making the note sound <b>Higher</b>.
-          =r ux.item
-            | The note (or the flavor) itself doesn't change, just how it sounds.
-          =r ux.item
-            | Food can be salty, and get saltier (pitch going up), but it doesn't magically become sweet (another note).
-          =r ux.item
-            | Below is the note C played along 6 different octaves using the Piano voicing.
+          br
+          =r ux.list 'huge bulleted'
+            =r ux.item
+              | Lets highlight the C to make it easier to see every time the notes wrap around.
+            =r ux.item
+              | We're going to put the octave number in parenthesis to make it easier to visualize octave changes.
+          br
+          =r ux.segment 'basic compact centered'
+            table.grid.numbered
+              - @grid.each_with_index do |row, row_index|
+                tr
+                  - row.each_with_index do |column, column_index|
+                    td class="#{'black' unless column.natural} #{'purple' if column.alias == '1'}"
+                      span class="row-#{row_index} column-#{column_index}"
+                        = column.name
 
-        br
-        iframe width="700" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1082513785&color=%23584b2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-        br
+          br
+          =r ux.list 'huge bulleted'
+            =r ux.item
+              | As the octave increases so does the <b>Pitch</b> making the note sound <b>Higher</b>.
+            =r ux.item
+              | The note (or the flavor) itself doesn't change, just how it sounds.
+            =r ux.item
+              | Food can be salty, and get saltier (pitch going up), but it doesn't magically become sweet (another note).
+            =r ux.item
+              | Below is the note C played along 6 different octaves using the Piano voicing.
 
-        br
-        br
-        =r ux.h1 text: "Lets Add Color 🎨", class: 'horizontal divider massive'
-        br
-        =r ux.list 'huge bulleted'
-          =r ux.item
-          | The color will make things easier to remember, by associating letters with colors.
-        =r ux.segment
-          .notes
-            - @note_bank.notes.each do |note|
-              .note style="background-color: #{note.color}; color: #{note.text_color};"
-                = note.name
+          br
+          iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1082513785&color=%23584b2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          br
 
-        br
+          br
+          br
+          =r ux.h1 text: "Lets Add Color 🎨", class: 'horizontal divider massive'
+          br
+          =r ux.list 'huge bulleted'
+            =r ux.item
+            | The color will make things easier to remember, by associating letters with colors.
+          =r ux.segment 'centered'
+            .notes
+              - @note_bank.notes.each do |note|
+                .note style="background-color: #{note.color}; color: #{note.text_color};"
+                  = note.name
 
-        =r ux.list 'huge bulleted'
-          =r ux.item
-            | Now lets re-arange things back into a grid.
-          =r ux.item
-            | We'll be using this notation throughout this site.
-        table.grid
-          - @grid.each do |row|
-            tr
-              - row.each do |column|
-                td style="background-color: #{column.color}; color: #{column.text_color};"
-                  = column.name
-        br
-        br
-    =r ux.row
-      =r ux.column size: 12, class: 'centered'
-        =r ux.h1 text: 'Take Your Time 🧘‍♀', class: 'horizontal divider massive'
-        =r ux.list 'huge bulleted'
-          =r ux.item
-            | Learning to use the grid controller is no different then using a computer keyboard.
-          =r ux.item
-            | In the beginning you will look at the keyboard to find the notes you are looking for.
-          =r ux.item
-            | Over time you will develop muscle memmory, and will know which button to press based on the sound you want to produce.
+          br
+
+          =r ux.list 'huge bulleted'
+            =r ux.item
+              | Now lets re-arange things back into a grid.
+            =r ux.item
+              | We'll be using this notation throughout this site.
+          br
+
+          =r ux.segment 'basic'
+            table.grid
+              - @grid.each do |row|
+                tr
+                  - row.each do |column|
+                    td style="background-color: #{column.color}; color: #{column.text_color};"
+                      = column.name
+          br
+          br
+      =r ux.row
+        =r ux.column size: 12, class: 'centered'
+          =r ux.h1 text: 'Take Your Time 🧘‍♀', class: 'horizontal divider massive'
+          =r ux.list 'huge bulleted'
+            =r ux.item
+              | Learning to use the grid controller is no different then using a computer keyboard.
+            =r ux.item
+              | In the beginning you will look at the controller to find the notes you are looking for.
+            =r ux.item
+              | Over time you will develop muscle memory, and will know which button to press based on the sound you want to produce.
+          br
