@@ -1,4 +1,6 @@
-=r ux.h3 text: "#{note.name}#{prefix}", id: "note-#{note.name.downcase}"
+div class="note-spacer" id="note-#{note.name.downcase.gsub('♯','-sharp')}"
+
+=r ux.h3 text: "#{note.name}#{prefix}"
 =r ux.segment 'compact secondary'
   table.grid
     - @grid.each do |row|
