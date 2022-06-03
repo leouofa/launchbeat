@@ -1,1 +1,1 @@
-= link_to note.name, "#note-#{note.name.downcase}", class: 'item'
+= link_to note.name, "#note-#{note.name.downcase.gsub('♯','-sharp')}", class: 'item'
