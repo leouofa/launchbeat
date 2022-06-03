@@ -1,4 +1,4 @@
-# LaunchBeat 
+# LaunchBEAT
 ### ⌨️ + 🎵 = ❤️
 The purpose of this project is to make music easier to learn for new musicians by leveraging the similarity between Launchpad grid controllers and computer keyboards.
 
