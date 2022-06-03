@@ -26,8 +26,8 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@webpack-cli/serve": "^1.6.0",
-    "webpack-dev-server": "^4.7.2"
+    "@webpack-cli/serve": "^1.6.1",
+    "webpack-dev-server": "^4.9.1"
   },
   "babel": {
     "presets": [
