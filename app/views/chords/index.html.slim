@@ -1,2 +1,32 @@
-h1 Chords#index
-p Find me in app/views/chords/index.html.slim
+=r ux.screen 'chords index'
+  =r ux.container
+    =r ux.grid
+      =r ux.row
+        =r ux.column computer: 11, tablet: 16, mobile: 16, class: 'centered'
+          =r ux.segment 'fat stacked'
+            =r ux.h1 text: 'Chords 🎹', class: 'horizontal divider'
+            =r ux.list 'huge bulleted relaxed'
+              =r ux.item
+                | Chords are made up of notes played simultaneously.
+              =r ux.item
+                | There are over 4,000 possible chords. It is impossible to memorize all of them, and you don't have to.
+              =r ux.item text: "Chords sound different on different instruments, because of the #{link_to 'overtones', 'https://en.wikipedia.org/wiki/Overtone', target: '_blank'}.".html_safe
+              =r ux.item
+                | Different chords make people feel different emotions. Major chords are considered happy, minor chords are considered sad.
+          br
+
+      =r ux.row
+        =r ux.column computer: 11, tablet: 16, mobile: 16, class: 'centered'
+          =r ux.segment 'fat stacked'
+            =r ux.h1 text: 'Essential Chords 🎻', class: 'horizontal divider'
+            =r ux.list 'huge bulleted relaxed'
+              =r ux.item
+                | <strong>Cmaj, Gmaj, Amin and Fmaj</strong> are the 4 most popular chords used in pop. music.
+              =r ux.item
+                | They can also be written as <strong>C, G, Am, and F</strong>
+              =r ux.item text: "Chords sound different on different instruments, because of the #{link_to 'overtones', 'https://en.wikipedia.org/wiki/Overtone', target: '_blank'}.".html_safe
+              =r ux.item text: "They can be arranged in #{link_to 'different order', 'https://en.wikipedia.org/wiki/I%E2%80%93V%E2%80%93vi%E2%80%93IV_progression', target: '_blank' } to transmit different emotions.".html_safe
+                | Different chords make people feel different emotions. Major chords are considered happy, minor chords are considered sad.
+
+            br
+            iframe width="100%" height="315" src="https://www.youtube.com/embed/5pidokakU4I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
