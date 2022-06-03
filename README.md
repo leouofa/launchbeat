@@ -10,4 +10,4 @@ The purpose of this project is to make music easier to learn for new musicians b
 
 
 #### Sponsorship
-This project is sponsored by [Story Pro](https://www.storypro.io).
+This project is sponsored by [StoryPRO](https://www.storypro.io).
