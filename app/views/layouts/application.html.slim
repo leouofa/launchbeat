@@ -9,6 +9,9 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     = stylesheet_pack_tag 'css', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Karla:wght@300;400;600&display=swap', media: 'none', onload: "if(media!='all')media='all'"
+    script defer="" data-domain="music.nextweb.art" src="https://plausible.io/js/plausible.js"
+
+
   body class="#{'with-chord-selector' if @show_chords} #{'with-note-selector' if @show_note_selector}"
     =r ux.menu ui: true, class: 'inverted compact top fixed navigation'
       = link_to root_path, class: 'ui item'
