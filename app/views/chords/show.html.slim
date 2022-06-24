@@ -2,9 +2,9 @@
   =r ux.segment 'basic'
     =r ux.grid
       =r ux.row
-        =r ux.column size: 8, class: 'center aligned centered'
-          =r ux.h1 text: "#{@chord.name} Chords (#{@chord.pattern.join('-')})"
+        =r ux.column size: 10, class: 'center aligned centered'
+          =r ux.segment 'fat breakdown'
+            =r ux.h1 text: "#{@chord.name} Chords (#{@chord.pattern.join('-')})"
 
           -(0..11).step do |note|
             = render partial: 'partials/grid', locals: {note: @note_bank.note_at_position(note), prefix: 'maj', shape: @chord.notes}
-            br
